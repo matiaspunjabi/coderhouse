@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@200&display=swap');
+
+$ff-1:'Oswald', sans-serif;
+$ff-2: "fangsong";
+
+html{
+    font-size: 62.5%;
+    background-color: #d3c9a2;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    font-family: $ff-1;
+}
