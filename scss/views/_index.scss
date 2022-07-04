@@ -17,7 +17,6 @@
         border-top: 0.1rem solid $clr-3;
         border-bottom: 0.1rem solid $clr-3;
         font-size: calc(2.5rem + 1vw);
-
     }
     &__span{
         color: $clr-3;
@@ -29,7 +28,8 @@
         width: 100%;
         display: grid;
         grid-template-columns: 2.5fr 1fr;
-        grid-auto-flow: row dense;
+        gap: 0 2rem;
+
     }
 }
 
@@ -53,7 +53,6 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 1rem;
         }
     }
 
@@ -105,6 +104,11 @@
         background-size: cover;
         background-position: center center;
         border-radius: 15px;
+        @include sm{
+            &{
+                grid-area: 3/1 / 4/3;
+            }
+        }
         @include md{
             &{
                 grid-area: 2/2 / 4/5;
@@ -133,14 +137,12 @@
             @include sm{
                 &{
                     margin: 0 auto;
-                    width: 28rem;
+                    width: auto;
                     line-height: 15rem;
                 }
             }
             @include md{
                 &{
-                    height: auto;
-                    width: auto;
                     line-height: 22rem;
                     &:hover{
                         cursor: pointer;
@@ -157,7 +159,21 @@
         }
 } 
 
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 0.2rem #42423f1c;
+    margin-top: 1rem;
+    @include md{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 .discount{
+    border-left: solid 0.2rem #42423f1c;
+    border-right: solid 0.2rem #42423f1c;
     margin-top: 1.1rem;
     height: auto;
     width: 100%;
@@ -165,6 +181,16 @@
     flex-direction: column;
     justify-content: center; 
     align-items: center;
+    &:nth-child(1){
+        border-right: none;
+    }
+    &:nth-child(2){
+        border-right: none;
+    }
+    &:hover{
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
     &__h2{
         font-family: $ff-3;
         padding: .5rem 10rem;
@@ -174,6 +200,8 @@
         background-color: #fb5371;
         box-shadow: 0.5rem 0.5rem 0px $clr-6;
         border-radius: 5px;
+        animation: scale 1.5s infinite;
+
     }
     &__box{
         max-width: 30rem;
@@ -188,6 +216,10 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        &:hover svg{
+            animation: carrito 1.5s infinite;
+        }
+
     }
     &__h3{
         width: 100%;
@@ -200,8 +232,8 @@
         margin: 0.5rem;
         height: 77%;
         width: 90%;
-        border-top: 0.2rem solid $clr-1;
-        border-radius: 5px;
+        border-top: 0.2rem solid $clr-5;
+        // border-radius: 5px;
         box-shadow: $box-shadow;
     }
     &__price{
@@ -209,15 +241,19 @@
         margin: 0 auto;
         margin-bottom: 0.5rem;
         width:50%;
-        border-top: 2px solid $clr-3;
+        border: $clr-6 0.15rem solid;
         border-radius:5px;
-        background-color: $clr-4;
+        background-color: $clr-5;
+        color: $clr-6;
         font-size: 1.2rem;
         text-align: center;
+        & p:first-child{
+            text-decoration: line-through;
+        }
     }
     &__final{
         color: $clr-7;
-        font-size: 1.7rem;
+        font-size: 1.75rem;
         font-weight: bold;
     }
     &__a{
@@ -225,9 +261,9 @@
         width: 25%;
         margin-bottom: 0.5rem;
         padding: .8rem 0;
-        background-color: $clr-2;
-        border-top: $clr-6 solid 0.2rem;
+        border: $clr-6 solid 0.2rem;
         border-radius: 0.5rem;
+        animation: bg-btn 2s infinite;
     }
     &__svg{
         width: 3rem;
@@ -246,7 +282,9 @@
 
     & a{
         color: $clr-6;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
 
         &:hover{
             text-decoration: underline;

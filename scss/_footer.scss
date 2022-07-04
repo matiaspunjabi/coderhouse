@@ -38,6 +38,8 @@ footer section{
         }
     }
     &__input{
+        width: 40vw;
+        max-width: 30rem;
         padding: 0.8rem 0;
         font-size: 1.5rem;
         color: $clr-5;
@@ -45,7 +47,6 @@ footer section{
         border: none;
         @include lg{
             &{
-                width: 30rem;
                 padding: 0.5rem 1rem;
             }
         }

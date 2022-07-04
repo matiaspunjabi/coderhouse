@@ -12,7 +12,50 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 1rem;
-  font-family: "Oswald", sans-serif; }
+  font-family: "Oswald", sans-serif;
+  animation: intro 1s ease-in-out; }
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    color: #292828;
+    box-shadow: 0.5rem 0.5rem 0px #292828; }
+  50% {
+    transform: scale(1.05);
+    color: #ffffff;
+    box-shadow: 0.5rem 0.5rem 0px #ffffff; }
+  100% {
+    transform: scale(1);
+    color: #292828;
+    box-shadow: 0.5rem 0.5rem 0px #292828; } }
+
+@keyframes logo {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
+
+@keyframes carrito {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes bg-btn {
+  0% {
+    background-color: #292828; }
+  50% {
+    background-color: #f7b94c; }
+  100% {
+    background-color: #292828; } }
+
+@keyframes intro {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .header {
   font-family: "Oswald", sans-serif;
@@ -30,7 +73,8 @@ body {
     width: calc(7.5rem + 2vw);
     border-radius: 10px;
     margin: 1rem;
-    border: solid #f7b94c; }
+    border: solid #f7b94c;
+    animation: logo 3s infinite; }
   .header__h1 {
     color: #ffffff;
     border: 0.2rem solid #ffffff;
@@ -103,7 +147,7 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    grid-auto-flow: row dense; } }
+    gap: 0 2rem; } }
 
 .section__products {
   height: auto;
@@ -122,8 +166,7 @@ body {
     .section__products {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 1rem; } }
+      grid-template-rows: repeat(2, 1fr); } }
   .section__products--1 {
     margin: 0.5rem 0;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/productos-s-tacc.jpeg");
@@ -158,6 +201,9 @@ body {
     background-size: cover;
     background-position: center center;
     border-radius: 15px; }
+    @media screen and (min-width: 580px) {
+      .section__products--5 {
+        grid-area: 3/1 / 4/3; } }
     @media screen and (min-width: 768px) {
       .section__products--5 {
         grid-area: 2/2 / 4/5; } }
@@ -178,12 +224,10 @@ body {
     @media screen and (min-width: 580px) {
       .section__products .sections__products--h3 {
         margin: 0 auto;
-        width: 28rem;
+        width: auto;
         line-height: 15rem; } }
     @media screen and (min-width: 768px) {
       .section__products .sections__products--h3 {
-        height: auto;
-        width: auto;
         line-height: 22rem; }
         .section__products .sections__products--h3:hover {
           cursor: pointer;
@@ -192,7 +236,20 @@ body {
           transition: 0.5s;
           transform: scale(1.01); } }
 
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid 0.2rem #42423f1c;
+  margin-top: 1rem; }
+  @media screen and (min-width: 768px) {
+    .container2 {
+      flex-direction: row;
+      justify-content: center; } }
+
 .discount {
+  border-left: solid 0.2rem #42423f1c;
+  border-right: solid 0.2rem #42423f1c;
   margin-top: 1.1rem;
   height: auto;
   width: 100%;
@@ -200,6 +257,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .discount:nth-child(1) {
+    border-right: none; }
+  .discount:nth-child(2) {
+    border-right: none; }
+  .discount:hover {
+    transform: scale(1.02);
+    transition: 0.3s; }
   .discount__h2 {
     font-family: "Bebas Neue", cursive;
     padding: .5rem 10rem;
@@ -208,7 +272,8 @@ body {
     color: #ffffff;
     background-color: #fb5371;
     box-shadow: 0.5rem 0.5rem 0px #ffffff;
-    border-radius: 5px; }
+    border-radius: 5px;
+    animation: scale 1.5s infinite; }
   .discount__box {
     max-width: 30rem;
     height: auto;
@@ -222,6 +287,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center; }
+    .discount__box:hover svg {
+      animation: carrito 1.5s infinite; }
   .discount__h3 {
     width: 100%;
     line-height: 4rem;
@@ -232,31 +299,33 @@ body {
     margin: 0.5rem;
     height: 77%;
     width: 90%;
-    border-top: 0.2rem solid #dd8329;
-    border-radius: 5px;
+    border-top: 0.2rem solid #292828;
     box-shadow: 1px 5px 7px #7f837f; }
   .discount__price {
     padding: 0.5rem;
     margin: 0 auto;
     margin-bottom: 0.5rem;
     width: 50%;
-    border-top: 2px solid #006a6a;
+    border: #ffffff 0.15rem solid;
     border-radius: 5px;
-    background-color: #2e8178;
+    background-color: #292828;
+    color: #ffffff;
     font-size: 1.2rem;
     text-align: center; }
+    .discount__price p:first-child {
+      text-decoration: line-through; }
   .discount__final {
     color: #f7b94c;
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     font-weight: bold; }
   .discount__a {
     margin: auto;
     width: 25%;
     margin-bottom: 0.5rem;
     padding: .8rem 0;
-    background-color: #b47434;
-    border-top: #ffffff solid 0.2rem;
-    border-radius: 0.5rem; }
+    border: #ffffff solid 0.2rem;
+    border-radius: 0.5rem;
+    animation: bg-btn 2s infinite; }
   .discount__svg {
     width: 3rem;
     height: 3rem;
@@ -272,7 +341,9 @@ body {
   border-radius: 15px; }
   .more a {
     color: #ffffff;
-    font-size: 1.5rem; }
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none; }
     .more a:hover {
       text-decoration: underline; }
 
@@ -310,6 +381,8 @@ footer section {
         color: #ffffff;
         text-decoration: underline; } }
   .footer__input {
+    width: 40vw;
+    max-width: 30rem;
     padding: 0.8rem 0;
     font-size: 1.5rem;
     color: #292828;
@@ -317,7 +390,6 @@ footer section {
     border: none; }
     @media screen and (min-width: 1040px) {
       .footer__input {
-        width: 30rem;
         padding: 0.5rem 1rem; } }
   .footer__submit {
     margin-left: .5rem;
