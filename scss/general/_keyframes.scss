@@ -1,0 +1,77 @@
+@keyframes scale {
+    0% {
+        transform: scale(1);
+        color: $clr-5;
+        box-shadow: 0.5rem 0.5rem 0px $clr-5;
+    }
+
+    50% {
+        transform: scale(1.05);
+        color: $clr-6 ;
+        box-shadow: 0.5rem 0.5rem 0px $clr-6;
+
+    }
+
+    100% {
+        transform: scale(1);
+        color: $clr-5;
+        box-shadow: 0.5rem 0.5rem 0px $clr-5;
+    }
+}
+
+@keyframes logo {
+    0% {
+        transform: rotateY(0deg);
+    
+    }
+
+    100% {
+        transform: rotateY(360deg);
+
+    }
+}
+
+@keyframes carrito {
+    0% {
+        transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(0.5);
+
+
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+@keyframes bg-btn{
+    0%{
+        background-color: $clr-5;
+
+    }
+
+    50%{
+        background-color: $clr-7;
+
+    }
+
+    100%{
+        background-color: $clr-5;
+
+    }
+}
+
+@keyframes intro{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}

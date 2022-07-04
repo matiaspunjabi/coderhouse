@@ -1,0 +1,25 @@
+{
+  "name": "project-responsive-css-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss style/main.css",
+    "watch-css": "nodemon -e scss -x \"npm  run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matiaspunjabi/coderhouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matiaspunjabi/coderhouse/issues"
+  },
+  "homepage": "https://github.com/matiaspunjabi/coderhouse#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18"
+  }
+}

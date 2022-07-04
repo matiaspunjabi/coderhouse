@@ -17,7 +17,6 @@ header{
 
 /* COMIENZO HEADER-NAV */
 
-
 .header__titulo{
     padding: 2.5rem;
     display: flex;
@@ -228,10 +227,6 @@ main{
 
 .section__mas a:hover{
     text-decoration: underline;
-}
-
-.sidebar{
-    display: none;
 }
 
 /* COMIENZO SERVICIOS */
@@ -581,10 +576,6 @@ footer section{
     display: none;
 }
 
-.imagen__email{
-    display: none;
-}
-
 .input__subs{
     padding: 0.8rem 0;
     font-size: 1.5rem;
@@ -665,15 +656,15 @@ footer section{
 }
 
 @media only screen and (min-width: 768px){
-    h1{
+    /* h1{
         font-size: 6.5rem;
         padding: 1rem 5rem;
-    }
+    } */
 
-    header div a img{
+    /* header div a img{
         width: 12.5rem;
         height: 12.5rem;
-    }
+    } */
 
     .img__frase{
         height: 20vh;

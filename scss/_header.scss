@@ -1,0 +1,41 @@
+.header{
+    font-family: $ff-1;
+    padding: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background-image: url("../img/fondo-logo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 0.2rem solid $clr-1;
+
+    &__logo{
+        width: calc(7.5rem + 2vw);
+        border-radius: 10px;
+        margin: 1rem;
+        border: solid #f7b94c;
+        animation: logo 3s infinite ;
+    }
+    
+    &__h1{
+        color: $clr-6;
+        border: 0.2rem solid $clr-6;
+        border-radius: 15px;
+        padding: 1.5rem 2.5rem;
+        font-size: calc(3rem + 2vw);
+        font-weight: bold;
+        display: none;
+
+        & a{        
+            color: $clr-6;
+            text-decoration: none;
+        }
+
+        @include sm{
+            display: block;
+        }
+    }
+}
+

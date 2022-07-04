@@ -1,0 +1,84 @@
+footer section{   
+        padding: 1rem ;
+        background-color: $clr-4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 0.2rem solid $clr-3;
+        box-shadow: $box-shadow;
+}
+
+.footer{
+    grid-area: footer;
+    width: 100%;
+    border-top: 0.1rem solid $clr-3;
+    margin-top: 1rem;
+    padding-top: 2rem;
+
+    &__form{
+        width: 100%;
+        padding-bottom: 0.5rem;
+        border-bottom: $clr-3 solid 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__subscription{
+        display: none;
+        @include lg{
+            &{
+                display: block;
+                margin-bottom: 0.2rem;
+                font-size: 3rem;
+                color: $clr-6;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__input{
+        width: 40vw;
+        max-width: 30rem;
+        padding: 0.8rem 0;
+        font-size: 1.5rem;
+        color: $clr-5;
+        font-weight: bold;
+        border: none;
+        @include lg{
+            &{
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+    &__submit{
+        margin-left: .5rem;
+        padding: 0.8rem 1rem;
+        color: $clr-6;
+        border: none;
+        border-top: #ffffff solid 0.2rem;
+        background-color: $clr-3;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    &__redes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__svg{
+        width: 5rem;
+        margin: 0.5rem;
+        fill: $clr-6;
+    }
+    &__svg{
+        width: 5rem;
+        margin: 0.5rem;
+        fill: $clr-6; 
+    }
+    &__svg{
+        width: 5rem;
+        margin: 0.5rem;
+        fill: $clr-6;
+    }
+}
