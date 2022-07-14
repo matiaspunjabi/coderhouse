@@ -13,123 +13,105 @@
         width: 100%;
         margin: 1rem 0;
         padding: 1rem 0;
-        color: $clr-3;
+        color: map-get($map: $clr, $key: tres);
         text-align: center;
-        border-top: 0.1rem solid $clr-3;
-        border-bottom: 0.1rem solid $clr-3;
+        border-top: 0.1rem solid map-get($map: $clr, $key: tres);
+        border-bottom: 0.1rem solid map-get($map: $clr, $key: tres);
         font-size: calc(2.5rem + 1vw);
     }
     &__span{
-        color: $clr-1;
+        color: map-get($map: $clr, $key: uno);
     }
 }
 
 .container{
     @include lg{
         width: 100%;
-        display: grid;
-        grid-template-columns: 2.5fr 1fr;
-        gap: 0 2rem;
-
+        @include d-grid(grid,2.5fr 1fr, 0 2rem);
     }
 }
 
 .section__products{
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex(flex, column, space-between, center);
     user-select: none;
 
     @include sm{
         &{
             height: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 28rem);
+            @include d-grid(grid, repeat(2, 28rem), 0 .5rem);
             justify-content: center;
-            gap: 0 0.5rem;
         }
     }
     @include md{
         &{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            @include d-grid(grid, repeat(4, 1fr), 0);
             grid-template-rows: repeat(2, 1fr);
         }
     }
 
-        &--1{    
+        &--a{    
         margin: 0.5rem 0;
-        background-image: $filter-1,
-        url("../img/productos-s-tacc.jpeg");
         background-size: cover;
         background-position: center center;
         border-radius: 15px;
-        @include md{
-            &{
-                grid-area: 1/1 / 2/3;
-            }
         }
+        &--1{
+            background-image: $filter-1,
+            url("../img/productos-s-tacc.jpeg");   
+            @include md{
+                &{
+                    grid-area: 1/1 / 2/3;
+                }
+        }    
         }
+        
         &--2{    
-        margin: 0.5rem 0;
-        background-image: $filter-1,
-        url("../img/condimentos.jpeg");
-        background-size: cover;
-        background-position: center center;
-        border-radius: 15px;
+            @extend .section__products--a;
+            background-image: $filter-1,
+            url("../img/condimentos.jpeg");
         }
 
-        &--3{    
-        margin: 0.5rem 0;
-        background-image: $filter-1,
-        url("../img/frutos-secos.jpg");
-        background-size: cover;
-        background-position: center center;
-        border-radius: 15px;
-        display: inline;
+        &--3{   
+            @extend .section__products--a; 
+            background-image: $filter-1,
+            url("../img/frutos-secos.jpg");    
         }
 
-        &--4{    
-        margin: 0.5rem 0;
-        background-image: $filter-1,
-        url("../img/harinas.jpg");
-        background-size: cover;
-        background-position: center center;
-        border-radius: 15px;
+        &--4{   
+            @extend .section__products--a;             
+            background-image: $filter-1,
+            url("../img/harinas.jpg");    
         }
 
-        &--5{    
-        margin: 0.5rem 0;
-        background-image: $filter-1,
-        url("../img/vegano.jpg");
-        background-size: cover;
-        background-position: center center;
-        border-radius: 15px;
-        @include sm{
+        &--5{   
+            @extend .section__products--a;              
+            background-image: $filter-1,
+            url("../img/vegano.jpg");
+    
+            @include sm{
             &{
                 grid-area: 3/1 / 4/3;
             }
-        }
-        @include md{
+            }
+            @include md{
             &{
                 grid-area: 2/2 / 4/5;
             }
-        }
+            }
         }
         
         .sections__products--h3{
             width: 100vw;
             text-align: center;
-            color: $clr-6;
-            border: 0.5rem solid $clr-6;
+            color: map-get($map: $clr, $key: seis);
+            border: 0.5rem solid map-get($map: $clr, $key: seis);
             line-height: 15rem;
             font-size: clamp(2rem, 4rem, 6rem);    
             border-radius: 15px;
             &:active{
                 cursor: pointer;
-                color: $clr-1;
+                color: map-get($map: $clr, $key: uno);
                 background-image: linear-gradient(0deg, 
                 rgba(0,0,0,0.5),
                 rgba(0,0,0,0.5)
@@ -149,7 +131,7 @@
                     line-height: 22rem;
                     &:hover{
                         cursor: pointer;
-                        color: $clr-1;
+                        color: map-get($map: $clr, $key: uno);
                         background-image: linear-gradient(0deg, 
                         rgba(0,0,0,0.5),
                         rgba(0,0,0,0.5)
@@ -162,10 +144,33 @@
         }
 } 
 
+.destacados{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem 2vw;
+    background-color: map-get($map: $clr, $key: cinco);
+    @include d-flex(flex, row, space-between, center);
+    &__h3{
+        font-size: calc(2.5rem + 1vw);
+        text-transform: uppercase;
+        font-family: $ff-3;
+        color: map-get($map: $clr, $key: seis);
+    }
+
+    &__a{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: map-get($map: $clr, $key: seis);
+        text-decoration: none;
+        &:hover{
+            transform: scale(1.05);
+            color: map-get($map: $clr, $key: uno);
+        }
+    }
+}
+
 .container2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include d-flex(flex, column, center, center);
     margin: 2rem 0;
     @include md{
         flex-direction: row;
@@ -179,10 +184,7 @@
     margin-top: 1.1rem;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
+    @include d-flex(flex, column, center, center);
     user-select: none;
     &:nth-child(1){
         border-right: none;
@@ -199,9 +201,9 @@
         padding: .5rem 10rem;
         font-size: calc(2rem + 1vw);
         font-weight: bold;
-        color: $clr-6;
+        color: map-get($map: $clr, $key: seis);
         background-color: #fb5371;
-        box-shadow: 0.5rem 0.5rem 0px $clr-6;
+        box-shadow: 0.5rem 0.5rem 0px map-get($map: $clr, $key: seis);
         border-radius: 5px;
         animation: scale 1.5s infinite;
 
@@ -212,30 +214,26 @@
         margin: 1rem;
         font-size: 1.2rem;
         text-align: center;
-        background-color: #d3c9a2;
         border-radius: 5px;
         box-shadow: $box-shadow;
-        display: flex;
+        @include d-flex(flex, row, center, center);
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         &:hover svg{
             animation: carrito 1.5s infinite;
         }
-
     }
     &__h3{
         width: 100%;
         line-height: 4rem;
         font-size: 2rem;
-        color: $clr-6;
-        background-color: $clr-5;
+        color: map-get($map: $clr, $key: seis);
+        background-color: map-get($map: $clr, $key: cinco);
     }
     &__img{
         margin: 0.5rem;
         height: 77%;
         width: 90%;
-        border-top: 0.2rem solid $clr-5;
+        border-top: 0.2rem solid map-get($map: $clr, $key: cinco);
         box-shadow: $box-shadow;
     }
     &__price{
@@ -243,10 +241,10 @@
         margin: 0 auto;
         margin-bottom: 0.5rem;
         width:50%;
-        border: $clr-6 0.15rem solid;
+        border: map-get($map: $clr, $key: seis) 0.15rem solid;
         border-radius:5px;
-        background-color: $clr-5;
-        color: $clr-6;
+        background-color: map-get($map: $clr, $key: cinco);
+        color: map-get($map: $clr, $key: seis);
         font-size: 1.2rem;
         font-weight: bold;
         text-align: center;
@@ -255,8 +253,8 @@
         }
     }
     &__final{
-        color: $clr-7;
-        font-size: 1.75rem;
+        color: map-get($map: $clr, $key: siete);
+        font-size: 1.7rem;
         font-weight: bold;
     }
     &__a{
@@ -264,46 +262,17 @@
         width: 25%;
         margin-bottom: 0.5rem;
         padding: .8rem 0;
-        background-color: $clr-1;
-        border: 0.1rem solid  $clr-6;
+        background-color: map-get($map: $clr, $key: uno);
+        border: 0.1rem solid  map-get($map: $clr, $key: seis);
         border-radius: 0.5rem;
         &:hover{
-            background-color: $clr-2;
+            background-color: map-get($map: $clr, $key: dos);
         }
     }
     &__svg{
         width: 3rem;
         height: 3rem;
-        fill: $clr-6;
+        fill: map-get($map: $clr, $key: seis);
     }
 }
 
-.destacados{
-    width: 100%;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    background-color: $clr-5;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    &__h3{
-        margin-left: 1rem;
-        font-size: calc(2.5rem + 1vw);
-        text-transform: uppercase;
-        font-family: $ff-3;
-        color: $clr-6;
-    }
-
-    &__a{
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: $clr-6;
-        text-decoration: none;
-        margin-right: 2rem;
-        &:hover{
-            transform: scale(1.05);
-            color: $clr-1;
-        }
-    }
-}

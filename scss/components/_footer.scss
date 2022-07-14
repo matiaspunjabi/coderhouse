@@ -1,7 +1,7 @@
 
 footer section{   
         padding: 1rem ;
-        background-color: $clr-5;
+        background-color: map-get($map: $clr, $key: cinco);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -12,11 +12,11 @@ footer section{
 .footer{
     grid-area: footer;
     width: 100%;
-    border-top: 0.2rem solid $clr-6;
+    border-top: 0.2rem solid map-get($map: $clr, $key: seis);
     &__form{
         width: 100%;
         padding-bottom: 1.5rem;
-        border-bottom: $clr-6 solid 0.2rem;
+        border-bottom: map-get($map: $clr, $key: seis) solid 0.2rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,16 +29,16 @@ footer section{
                 display: block;
                 margin-bottom: 0.2rem;
                 font-size: 2.8rem;
-                color: $clr-6;
+                color: map-get($map: $clr, $key: seis);
             }
         }
     }
     &__input{
         width: 40vw;
         max-width: 30rem;
-        padding: 0.8rem 0;
+        padding-left: 1rem;
         font-size: 1.5rem;
-        color: $clr-5;
+        color: map-get($map: $clr, $key: cinco);
         font-weight: bold;
         border: none;
         @include lg{
@@ -50,15 +50,15 @@ footer section{
     &__submit{
         margin-left: .5rem;
         padding: 0.8rem 1rem;
-        color: $clr-6;
+        color: map-get($map: $clr, $key: seis);
         border: none;
         border-top: #ffffff solid 0.2rem;
-        background-color: $clr-1;
+        background-color: map-get($map: $clr, $key: uno);
         font-weight: bold;
         font-size: 1.5rem;
         transition: 0.3s;
         &:hover{
-            background-color: $clr-2;
+            background-color: map-get($map: $clr, $key: dos);
             transform: scale(1.02);
         }
 
@@ -71,13 +71,13 @@ footer section{
     &__svg{
         width: 5rem;
         margin: 0.5rem;
-        fill: $clr-6;
+        fill: map-get($map: $clr, $key: seis);
     }
 
     &__h5{
         text-align: center;
         font-size: 1.2rem;
-        color: $clr-6;
+        color: map-get($map: $clr, $key: seis);
     }
 
 }

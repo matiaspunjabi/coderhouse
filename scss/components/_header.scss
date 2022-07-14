@@ -11,7 +11,7 @@
     background-image: url("../img/fondo-logo2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    border-bottom: 0.2rem solid $clr-1;
+    border-bottom: 0.2rem solid map-get($map: $clr, $key: uno);
 
     &__logo{
         width: calc(7.5rem + 2vw);
@@ -22,8 +22,8 @@
     }
     
     &__h1{
-        color: $clr-6;
-        border: 0.2rem solid $clr-6;
+        color: map-get($map: $clr, $key: seis);
+        border: 0.2rem solid map-get($map: $clr, $key: seis);
         border-radius: 15px;
         padding: 1.5rem 2.5rem;
         font-size: calc(3rem + 2vw);
@@ -31,7 +31,7 @@
         display: none;
 
         & a{        
-            color: $clr-6;
+            color: map-get($map: $clr, $key: seis);
             text-decoration: none;
         }
 
