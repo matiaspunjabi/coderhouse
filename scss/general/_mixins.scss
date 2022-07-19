@@ -1,0 +1,15 @@
+@mixin d-grid($grid, $col, $gap){
+        display: $grid;
+        grid-template-columns: $col;
+        gap: $gap;
+}
+//      @include d-grid(grid, repeat(2, 28rem), 0 .5rem);
+
+
+@mixin d-flex($flex, $flex-dir, $just-c, $align-i) {
+    display: $flex;
+    flex-direction: $flex-dir;
+    justify-content: $just-c;
+    align-items: $align-i;
+}
+//      @include d-flex(flex, column, space-between, center)

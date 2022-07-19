@@ -1,445 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@200&display=swap');
-*{
-    padding: 0;
-    margin: 0;  
-    font-family: 'Oswald', sans-serif;
-    box-sizing: border-box;
-}    
-
-html{
-    font-size: 62.5%;
-background-color: #d3c9a2;
-}
-
-header{
-    grid-area: header;
-}
-
-/* COMIENZO HEADER-NAV */
-
-.header__titulo{
-    padding: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    background-image: url("../img/fondo-logo2.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-bottom: 0.2rem solid #d76b00;
-}
-
-.header__titulo h1 a{
-    color: #ffffff;
-    text-decoration: none;
-    
-}
-
-header div a img{
-    width: 8rem;
-    height: 8rem;
-    border-radius: 10px;
-    margin: 1rem;
-    border: solid #f7b94c;
-}
-
-h1{
-    color: #ffffff;
-    border: 0.2rem solid #ffffff;
-    border-radius: 15px;
-    padding: 1rem;
-    font-size: 5rem;
-    font-weight: bold;
-    display: none;
-}
-
-nav{
-    grid-area: nav;
-    font-size: 1.4rem;
-    position: sticky;
-    top: 0;
-    z-index: 99;
-}
-
-.nav__ul{
-    padding: 0.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-    background-color: #2e8178;
-    box-shadow: 1px 5px 7px #7f837f;
-    border-bottom: 0.2rem solid #006a6a;
-
-}
-
-.nav__ul a{
-    padding: 1rem;
-    text-decoration: none;
-    color: #dd8329;
-    font-weight: bold;
-
-}
-
-.nav__ul a:hover{
-    text-decoration: underline;
-    color: #ffffff;
-    background-color: #b47434;
-    transition: 0.4s;
-}
-/* COMIENZO INDEX */
-main{
-    grid-area: main;
-}
 
 
-.img__frase{
-    margin-top: 1rem;
-    width: 100%;    
-    height: 10vh;
-    object-fit: cover;  
-    opacity: 0.9;
-}
 
-.frase{
-    width: 100%;
-    margin: 1rem 0;
-    padding: 1rem 0;
-    color: #d76b00;
-    text-align: center;
-    border-top: 0.1rem solid #006a6a;
-    border-bottom: 0.1rem solid #006a6a;
-    font-size: 2rem;
-    font-family: fangsong;
-}
-
-.span__frase{
-    color: #006a6a;
-    font-family: fangsong;
-    
-}
-
-.section__products{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section__products--1{
-    margin: 1rem 0;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("../img/productos-s-tacc.jpeg");
-    background-size: cover;
-    background-position: center center;
-    border-radius: 15px;
-    grid-area: 1/1 / 2/3;
-}
-
-.section__products--2{
-    margin: 1rem 0;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("../img/condimentos.jpeg");
-    background-size: cover;
-    background-position: center center;
-    border-radius: 15px;
-}
-
-.section__products--3{
-    margin: 1rem 0;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("../img/frutos-secos.jpg");
-    background-size: cover;    background-position: center center;
-    border-radius: 15px;
-}
-
-.section__products--4{    
-    margin: 1rem 0;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("../img/harinas.jpg");
-    background-size: cover;
-    background-position: center center;
-    border-radius: 15px;
-}
-
-.section__products--5{
-    margin: 1rem 0;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    ),
-    url("../img/vegano.jpg");
-    background-size: cover;
-    background-position: center center;
-    border-radius: 15px;
-    grid-area: 2/2 / 4/5;
-
-}
-
-.section__products article h3{
-    width: 100vw;
-    text-align: center;
-    color: #ffffff;
-    border: 0.5rem solid #ffffff;
-    line-height: 15rem;
-    font-size: 3.5rem;    
-    border-radius: 15px;
-}
-
-.section__products article h3:hover{
-    cursor: pointer;
-    color: #ec7804;
-    background-image: linear-gradient(0deg, 
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-    );
-    transition: 0.5s;
-    transform: scale(1.01);
-}
-
-.section__mas{
-    width: 10rem;
-    margin: 1rem auto;
-    padding: 0.5rem;
-    text-align: center;
-    background-color: #c5782b;
-    border: 0.5rem solid #ffffff ;
-    border-radius: 15px;
-}
-.section__mas a{
-    color: #ffffff;
-    font-size: 1.5rem;
-}
-
-.section__mas a:hover{
-    text-decoration: underline;
-}
-
-/* COMIENZO SERVICIOS */
-
-.section__offer{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.section__p{
-    margin: 0 auto;
-    padding: 0.5rem 2rem;
-    font-size: 1.85rem;
-    font-weight: bold;
-    color:#292828;
-    width: 100%;
-    border-top: 0.2rem solid #d76b00;
-    background-image: linear-gradient(rgba(34, 33, 33, 0.671),rgba(0, 0, 0, 0.027));
-    
-}
-
-.hide{
-    display: none;
-}
-
-.section__offer img{
-    margin: 1rem auto;
-    height: 100%;
-    width: 96%;
-    border-radius: 10px;
-    border-top: #d76b00 solid 0.2rem;
-    box-shadow: 3px 4px 10px #363333;
-
-}
-
-.section__p li{
-    margin: 1rem;
-    margin-left: 2rem;
-    color: #d76b00;
-}
-
-.section__p li p{
-    color: #292828;
-    padding-left: 0.5rem;
-    text-decoration: underline;
-    text-decoration-color: #d76b00;
-}
-
-.video{
-    margin: 0 auto;
-    width: 100%;
-}
-
-.section__bag{
-    padding: 0;
-    width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.section__bag img{
-    margin: 1rem auto;
-    width: 96%;
-    height: 20%;
-    border-radius: 10px;
-    border-top: #d76b00 solid 0.2rem;
-    box-shadow: 3px 4px 10px #363333;
-
-}
-
-.section__bag img:last-child{
-    display: none;
-}
-
-/* COMIENZO OFERTAS */
-
-.consulta{
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-}
-
-.consulta a{
-    color: #d76b00;
-    font-weight: bold;
-    text-decoration: underline;
-    padding: 0.5rem 0.2rem;
-}
-
-.consulta a:hover{
-    color: #ffffff;
-    background-color: #c5782b;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
-.section__discount{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;
-}
-
-.discount__box{
-    max-width: 40rem;
-    height: auto;
-    margin: 1rem;
-    font-size: 1.2rem;
-    text-align: center;
-    background-color: #d3c9a2;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px #7f837f;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.discount__box:hover{
-    transform: scale(1.02);
-    transition: 0.3s;
-}
-.discount__box h3{
-    width: 100%;
-    line-height: 4rem;
-    font-size: 2rem;
-    color: #ffffff;
-    background-color: #292828;
-}
-
-.discount__img{
-    margin: 0.5rem;
-    height: 77%;
-    width: 90%;
-    border-top: 0.2rem solid #d76b00;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px #7f837f;
-}
-
-.discount__box div{
-    margin: 0 auto;
-    margin-bottom: 0.5rem;
-    width:60%;
-    border-top: 2px solid #006a6a;
-    border-radius:5px;
-    box-shadow: 0 2px 10px #7f837f;
-    background-color: #188d8d;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.a__ofertas{
-    margin: auto;
-    width: 25%;
-    margin-bottom: 0.5rem;
-    padding: .8rem 0;
-    background-color: #c5782b;
-    border-top: #ffffff solid 0.2rem;
-    border-radius: 0.5rem;
-    
-}
-
-.discount__price{
-    color: #f7b94c;
-    font-size: 1.7rem;
-    font-weight: bold;
-}
-
-.svg__ofertas{
-    width: 3rem;
-    height: 2.5rem;
-    fill: #ffffff;
-}
-
-.ofertas__carrito{
-    font-size: 4rem;
-    width: 90%;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
 /* COMIENZO NOSOTROS */
 
 .article__nosotros{
-    margin: 1rem auto;
-    max-width: 100rem;
+    /* margin: 1rem auto;
+    max-width: 100rem; */
 }
 
 .article__nosotros p{
-    font-weight: bold;
+    /* font-weight: bold;
     font-size: 1.5rem;
     text-align: center;
     border-top:#c5782b solid 3px;
     border-radius: 5px;
-    background-image: linear-gradient(rgba(34, 33, 33, 0.671),rgba(0, 0, 0, 0.027));
+    background-image: linear-gradient(rgba(34, 33, 33, 0.671),rgba(0, 0, 0, 0.027)); */
 }
 
 .article__nosotros img{
-    margin-top: 1rem;
+    /* margin-top: 1rem;
     height: 100%;
     width: 100%;
     border-radius: 10px;
     border-top: #d76b00 solid 0.2rem;
-    box-shadow: 3px 4px 10px #363333;
+    box-shadow: 3px 4px 10px #363333; */
 }
 
 /* COMIENZO CONTACTO */
@@ -611,72 +195,15 @@ footer section{
 
 @media only screen and (min-width: 600px){
 
-    /* index */
-    h1{
-        font-size: 5rem;
-        display: block;
-    }
-    
-    .section__products article h3{
-        margin: 0 auto;
-        width: 25rem;
-        line-height: 15rem;
-        font-size: 4rem;
-    }
-
-    .section__products{
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-
-    }
 
     /* servicios */
 
-    .section__p{
-        height: auto;
-        width: 60%;
-    } 
 
-    .section__v{
-        width: 95%;
-    }
-
-    .video{
-        width: 100%;
-    }
-
-    .section__bag img, .section__offer img{
-        width: 30%;
-        height: auto;
-    }
   
 }
 
 @media only screen and (min-width: 768px){
-    /* h1{
-        font-size: 6.5rem;
-        padding: 1rem 5rem;
-    } */
 
-    /* header div a img{
-        width: 12.5rem;
-        height: 12.5rem;
-    } */
-
-    .img__frase{
-        height: 20vh;
-    }
-
-    .frase{
-        font-size: 3rem;
-    }
-
-    nav{
-        font-size: 2.7rem;
-    }
 
     .section__p li p{
         font-size: 2rem;
@@ -737,40 +264,8 @@ footer section{
 @media only screen and (min-width: 1024px){
     /* INDEX */
 
-    .frase{
-        font-size: 3.5rem;
-    }
-
-    .section__products{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .section__products article h3{
-        height: auto;
-        width: auto;
-        font-size: 5rem;
-        line-height: 30rem;
-    }
-
-    .subscription{
-        display: block;
-        margin-bottom: 0.2rem;
-        font-size: 3rem;
-        color: #ffffff;
-        text-decoration: underline;
-    }
-
-    .input__subs{
-        width: 30rem;
-        padding: 0.5rem 1rem;
-        margin-left: 18rem;
-    }
-
     /* SERVICIOS */
-
+/* 
     .section__offer{
         width: 100%;
         display: grid;
@@ -840,7 +335,7 @@ footer section{
         display: block;
         box-shadow: 3px 4px 10px #363333;
         margin-top: 0;
-    }
+    } */
 
     /* CONTACTO */
 

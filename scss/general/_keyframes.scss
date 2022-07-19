@@ -1,21 +1,21 @@
 @keyframes scale {
     0% {
         transform: scale(1);
-        color: $clr-5;
-        box-shadow: 0.5rem 0.5rem 0px $clr-5;
+        color: map-get($map: $clr, $key: cinco);
+        box-shadow: 0.5rem 0.5rem 0px map-get($map: $clr, $key: cinco);
     }
 
     50% {
         transform: scale(1.05);
-        color: $clr-6 ;
-        box-shadow: 0.5rem 0.5rem 0px $clr-6;
+        color: map-get($map: $clr, $key: seis) ;
+        box-shadow: 0.5rem 0.5rem 0px map-get($map: $clr, $key: seis);
 
     }
 
     100% {
         transform: scale(1);
-        color: $clr-5;
-        box-shadow: 0.5rem 0.5rem 0px $clr-5;
+        color: map-get($map: $clr, $key: cinco);
+        box-shadow: 0.5rem 0.5rem 0px map-get($map: $clr, $key: cinco);
     }
 }
 
@@ -38,7 +38,7 @@
     }
 
     50% {
-        transform: scale(0.5);
+        transform: scale(0.8);
 
 
     }
@@ -51,17 +51,17 @@
 
 @keyframes bg-btn{
     0%{
-        background-color: $clr-5;
+        background-color: map-get($map: $clr, $key: cinco);
 
     }
 
     50%{
-        background-color: $clr-7;
+        background-color: map-get($map: $clr, $key: siete);
 
     }
 
     100%{
-        background-color: $clr-5;
+        background-color: map-get($map: $clr, $key: cinco);
 
     }
 }

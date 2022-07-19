@@ -1,0 +1,98 @@
+
+.contact{
+    margin: auto;
+    width: 100%;
+    max-width: 100rem;
+    @include d-flex(flex, column, center, center);
+    gap: 1rem;
+    @include md {
+        flex-direction: row;
+        align-items: stretch
+    }
+    &__ul{
+        @extend .about__p;
+        width: 90%;
+        text-align: left;
+        @include md{
+            width: 60%;
+        }
+        
+    }
+    &__li{
+        margin-left: 1rem;
+        padding: 1rem .5rem;
+        list-style: none;
+        font-size: calc(0.9rem + 0.8vw);
+        @include md{
+            padding: 1rem;
+        }
+    }
+    &__span{
+        color: map-get($map: $clr, $key: seis);
+    }
+    &__map{
+        padding: 0.5rem;
+        width: 90%;
+        @include md{
+            width: 40%;
+        }
+    }
+}
+
+.form{
+    color: #b47434;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 55rem;
+    margin: auto;
+    padding: 1.5rem;
+    font-weight: bold;
+    background-color:#222;
+    border-top: #d76b00 solid 0.2rem;
+    &__input{
+        color: #ffffff;
+        font-weight: bold;
+        margin: 1rem;
+        padding: 1.2rem;
+        width: 100%;
+        background-color: map-get($map: $clr, $key: cinco);
+        border: none;
+        border-bottom: #b47434 solid 0.2rem;
+    }
+    &__text{
+        resize: none;
+        margin: 0 auto;
+        padding: 1rem;
+        width: 100%;
+        height: 17rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color:#ffffff;
+        background-color: rgba(0, 0, 0, 0.01);
+        border: hidden;
+        border-bottom: #b47434 solid 0.2rem;
+    }
+    &__submit{
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem 1rem;
+        color: #ffffff;
+        border: none;
+        border-top: #ffffff solid 0.1rem;
+        background-color: map-get($map: $clr, $key: uno);
+        font-weight: bold;
+        font-size: 1.8rem;
+        &:hover{
+            background-color: map-get($map: $clr, $key: dos);
+        }
+    }
+    ::placeholder{
+        color: #ffffff9d;
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: $ff-1;
+        letter-spacing: 0.1rem;
+    }
+    }

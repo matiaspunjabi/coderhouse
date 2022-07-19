@@ -1,0 +1,125 @@
+
+.offer{
+    width: 100%;
+    @include d-flex(flex, row, space-evenly, stretch );
+    flex-wrap: wrap;
+    @include lg{
+        @include d-grid(grid, 60rem 40rem, 1rem 0);
+        grid-template-rows: 55rem 45rem;
+    }
+    &__p{
+        margin: 0 auto;
+        padding: 0.5rem 2rem;
+        font-size: 1.85rem;
+        font-weight: bold;
+        color: map-get($map: $clr, $key: cinco);
+        width: 100%;
+        border-top: 0.2rem solid map-get($map: $clr, $key: uno);
+        background-image: linear-gradient(rgba(34, 33, 33, 0.671),rgba(0, 0, 0, 0.027));
+        @include sm{
+            height: auto;
+            width: 60%;
+        }
+        @include lg{
+            width: 100%;
+            object-fit: cover;
+            padding: 0 2rem;
+        }
+    }
+
+    &__img{
+        margin: 1rem auto;
+        height: 100%;
+        width: 96%;
+        border-radius: 10px;
+        border-top: map-get($map: $clr, $key: uno) solid 0.2rem;
+        box-shadow: $box-shadow;
+        object-fit: cover;
+        @include sm{
+            margin: 0 auto;
+            width: 35% ;
+            height: auto;
+        }
+        @include lg{
+            width: 100%;
+            max-width: 70rem;
+        }
+        &:nth-child(2){
+            display: none;
+            @include lg{
+                display: block;
+            }
+        }
+        &:nth-child(3){
+            display: none;
+            @include lg{
+                display: block;
+            }
+        }
+    }
+}
+
+.container__bag-autoservice{
+    margin-bottom: 1.5rem;
+    @include lg{
+        height: 100%;
+        @include d-grid(grid, 1fr 1fr, 0);
+    }
+}
+
+.autoservice{
+    @extend .offer__p;
+    &__li{
+        margin: 1rem;
+        margin-left: 2rem;
+        color: map-get($map: $clr, $key: uno);
+    }
+    &__p{
+        color: map-get($map: $clr, $key: tres);
+        padding-left: 0.5rem;
+        text-decoration: underline;
+        text-decoration-color: map-get($map: $clr, $key: uno);
+        @include md{
+            font-size: 2rem;
+        }
+    }
+    &__video{
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.bag{
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &__p{
+        @extend .offer__p;
+        @include sm{
+            width: 55%;
+        }
+    }
+    &__img{
+        margin: 1rem auto;
+        height: 20rem;
+        width: 32rem;
+        border-radius: 10px;
+        border-top: map-get($map: $clr, $key: uno) solid 0.2rem;
+        box-shadow: $box-shadow;
+        object-fit: cover;
+        object-position: 0 -10rem;
+        @include sm{
+            object-fit: cover;
+            object-position: center;
+            margin: 0 .5rem;
+            width: 40%;
+            height: 100%;
+        }
+        @include lg{
+            margin: 0;
+            width: 40%;
+            height: 45rem;
+        }
+    }
+}
