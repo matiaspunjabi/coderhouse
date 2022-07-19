@@ -1,5 +1,6 @@
 
 footer section{   
+        margin-top: 1rem;
         padding: 1rem ;
         background-color: map-get($map: $clr, $key: cinco);
         display: flex;
@@ -36,16 +37,11 @@ footer section{
     &__input{
         width: 40vw;
         max-width: 30rem;
-        padding-left: 1rem;
-        font-size: 1.5rem;
+        padding: 0.8rem 1rem;
+        font-size: 1.35rem;
         color: map-get($map: $clr, $key: cinco);
         font-weight: bold;
         border: none;
-        @include lg{
-            &{
-                padding: 0.8rem 1rem;
-            }
-        }
     }
     &__submit{
         margin-left: .5rem;
