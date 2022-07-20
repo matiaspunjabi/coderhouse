@@ -106,7 +106,7 @@
             color: map-get($map: $clr, $key: seis);
             border: 0.5rem solid map-get($map: $clr, $key: seis);
             line-height: 15rem;
-            font-size: clamp(2rem, 4rem, 6rem);    
+            font-size: clamp(2rem, 3rem, 6rem);    
             border-radius: 15px;
             &:active{
                 cursor: pointer;

@@ -9,6 +9,7 @@ html {
   background-color: #d3c9a2; }
 
 body {
+  background-color: #d3c9a2;
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 1rem;
@@ -91,34 +92,26 @@ body {
         display: block; } }
 
 .nav {
-  font-family: "Oswald", sans-serif;
-  grid-area: nav;
-  position: sticky;
-  top: 0;
-  z-index: 2; }
-  .nav__ul {
-    font-size: calc(1.2rem + 1vw);
-    padding: 0.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-    background-color: #292828;
-    box-shadow: 1px 5px 7px #7f837f; }
-  .nav__a {
-    padding: 1rem;
-    text-decoration: none;
-    color: #dd8329;
-    font-weight: bold; }
-    .nav__a:active {
-      text-decoration: underline;
-      color: #ffffff;
-      background-color: #b47434; }
-    @media screen and (min-width: 1040px) {
-      .nav__a:hover {
-        color: #ffffff;
-        background-color: #b47434;
-        transition: 0.4s; } }
+  background-color: #292828;
+  font-family: "Oswald", sans-serif; }
+  .nav__h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    margin: 0 1rem;
+    border: 0.1rem solid #ffffff;
+    border-radius: 15px; }
+    @media screen and (min-width: 580px) {
+      .nav__h2 {
+        display: none; } }
+  .nav__a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #b47434; }
+
+.navbar-toggler-icon {
+  color: var(--color6); }
 
 footer section {
   margin-top: 1rem;
@@ -261,7 +254,7 @@ footer section {
     color: #ffffff;
     border: 0.5rem solid #ffffff;
     line-height: 15rem;
-    font-size: clamp(2rem, 4rem, 6rem);
+    font-size: clamp(2rem, 3rem, 6rem);
     border-radius: 15px; }
     .section__products .sections__products--h3:active {
       cursor: pointer;
