@@ -3,19 +3,20 @@
     max-width: 90rem;
     @include sm{
         padding: .5rem;
-        @include d-grid(grid, 35rem auto, 2rem);
-    }
-    @include md{
-        grid-template-columns: 40rem auto;
+        @include d-grid(grid, 40rem auto, 2rem);
     }
     &__p{
+        padding: 1rem;
         font-weight: bold;
-        font-size: calc(1.2rem + .5vw);
+        font-size: 2rem;
         text-align: center;
         border-top:map-get($map: $clr, $key: uno) solid 3px;
         border-radius: 5px;
         background-image: linear-gradient(rgba(34, 33, 33, 0.671),rgba(0, 0, 0, 0.027));
-
+    }
+    &__span{
+        font-size: 2.5rem;
+        color: map-get($map: $clr, $key: uno);
     }
     &__img{
         margin: 1rem auto;
@@ -28,7 +29,6 @@
         @include sm{
             margin: auto;
         }
-
     }
 }
 
@@ -37,6 +37,9 @@
     @extend .about;
     &__p{
         @extend .about__p;
+    }
+    &__span{
+        @extend .about__span;
     }
     &__img{
         @extend .about__img;

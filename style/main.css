@@ -421,8 +421,8 @@ footer section {
       grid-template-rows: 55rem 45rem; } }
   .offer__p, .autoservice, .bag__p {
     margin: 0 auto;
-    padding: 0.5rem 2rem;
-    font-size: 1.85rem;
+    padding: .5rem 2rem;
+    font-size: 2.1rem;
     font-weight: bold;
     color: #292828;
     width: 100%;
@@ -435,8 +435,16 @@ footer section {
     @media screen and (min-width: 1040px) {
       .offer__p, .autoservice, .bag__p {
         width: 100%;
-        object-fit: cover;
-        padding: 0 2rem; } }
+        padding: 1rem 2rem;
+        font-size: 2.5rem; } }
+  .offer__span, .bag__span {
+    font-size: 2.5rem;
+    color: #dd8329; }
+    @media screen and (min-width: 1040px) {
+      .offer__span, .bag__span {
+        font-size: 3rem; } }
+  .offer__a {
+    color: #b47434; }
   .offer__img {
     margin: 1rem auto;
     height: 100%;
@@ -486,7 +494,7 @@ footer section {
   text-decoration-color: #dd8329; }
   @media screen and (min-width: 768px) {
     .autoservice__p {
-      font-size: 2rem; } }
+      font-size: 2.3rem; } }
 
 .autoservice__video {
   margin: 0 auto;
@@ -524,7 +532,7 @@ footer section {
 
 .consulta {
   padding: 1rem;
-  font-size: calc(0.9rem + 0.8vw);
+  font-size: 1.7rem;
   text-decoration: none;
   font-weight: bold;
   text-align: center; }
@@ -564,18 +572,19 @@ footer section {
     .about, .mision {
       padding: .5rem;
       display: grid;
-      grid-template-columns: 35rem auto;
+      grid-template-columns: 40rem auto;
       gap: 2rem; } }
-  @media screen and (min-width: 768px) {
-    .about, .mision {
-      grid-template-columns: 40rem auto; } }
   .about__p, .mision__p, .contact__ul {
+    padding: 1rem;
     font-weight: bold;
-    font-size: calc(1.2rem + .5vw);
+    font-size: 2rem;
     text-align: center;
     border-top: #dd8329 solid 3px;
     border-radius: 5px;
     background-image: linear-gradient(rgba(34, 33, 33, 0.671), rgba(0, 0, 0, 0.027)); }
+  .about__span, .mision__span {
+    font-size: 2.5rem;
+    color: #dd8329; }
   .about__img, .mision__img {
     margin: 1rem auto;
     height: 100%;
@@ -614,10 +623,11 @@ footer section {
     margin-left: 1rem;
     padding: 1rem .5rem;
     list-style: none;
-    font-size: calc(0.9rem + 0.8vw); }
+    font-size: 1.7rem; }
     @media screen and (min-width: 768px) {
       .contact__li {
-        padding: 1rem; } }
+        padding: .7rem;
+        font-size: 2rem; } }
   .contact__span {
     color: #ffffff; }
   .contact__map {

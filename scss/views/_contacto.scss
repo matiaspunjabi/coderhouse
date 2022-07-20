@@ -22,9 +22,10 @@
         margin-left: 1rem;
         padding: 1rem .5rem;
         list-style: none;
-        font-size: calc(0.9rem + 0.8vw);
+        font-size: 1.7rem;
         @include md{
-            padding: 1rem;
+            padding: .7rem;
+            font-size: 2rem;
         }
     }
     &__span{

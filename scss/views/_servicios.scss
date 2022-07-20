@@ -9,8 +9,8 @@
     }
     &__p{
         margin: 0 auto;
-        padding: 0.5rem 2rem;
-        font-size: 1.85rem;
+        padding: .5rem 2rem;
+        font-size: 2.1rem;
         font-weight: bold;
         color: map-get($map: $clr, $key: cinco);
         width: 100%;
@@ -22,9 +22,21 @@
         }
         @include lg{
             width: 100%;
-            object-fit: cover;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
+            font-size: 2.5rem;
         }
+    }
+
+    &__span{
+        font-size: 2.5rem;
+        color: map-get($map: $clr, $key: uno);
+        @include lg{
+            font-size: 3rem;
+        }
+    }
+   
+    &__a{
+        color: map-get($map: $clr, $key: dos);
     }
 
     &__img{
@@ -80,7 +92,7 @@
         text-decoration: underline;
         text-decoration-color: map-get($map: $clr, $key: uno);
         @include md{
-            font-size: 2rem;
+            font-size: 2.3rem;
         }
     }
     &__video{
@@ -99,6 +111,10 @@
         @include sm{
             width: 55%;
         }
+    }
+
+    &__span{
+        @extend .offer__span;
     }
     &__img{
         margin: 1rem auto;
