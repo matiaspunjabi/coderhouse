@@ -1,0 +1,36 @@
+.error{
+    width: 100%;
+    height: 100vh;
+    @include d-flex(flex, column, space-between, center);
+    background: url(../img/error404.webp) center center no-repeat;
+    padding: 7rem 1rem;
+    font-family: $ff-3;
+    &__h1{
+        font-size: 6rem;
+        color: map-get($map: $clr, $key: tres);
+    }
+    &__div{
+        text-align: center;
+    }
+    &__p{
+        font-size: 3.5rem;
+        color: map-get($map: $clr, $key: tres);
+        margin:5rem 0;
+    
+    }
+    &__span{
+        padding: 1rem 2rem ;
+        color: map-get($map: $clr, $key: tres);
+        border: none;
+        background-color: map-get($map: $clr, $key: cuatro);
+        font-weight: bold;
+        font-size: 2rem;
+        transition: 0.3s;
+        &:hover{
+            background-color: map-get($map: $clr, $key: tres);
+            color: map-get($map: $clr, $key: seis);
+            transform: scale(1.02);
+        }
+
+    }
+}

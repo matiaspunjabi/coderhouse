@@ -57,7 +57,7 @@
         }
         &--1{
             background-image: $filter-1,
-            url("../img/productos-s-tacc.jpeg");   
+            url("../img/productos-s-tacc.webp");   
             @include md{
                 &{
                     grid-area: 1/1 / 2/3;
@@ -68,25 +68,25 @@
         &--2{    
             @extend .section__products--a;
             background-image: $filter-1,
-            url("../img/condimentos.jpeg");
+            url("../img/condimentos.webp");
         }
 
         &--3{   
             @extend .section__products--a; 
             background-image: $filter-1,
-            url("../img/frutos-secos.jpg");    
+            url("../img/frutos-secos.webp");    
         }
 
         &--4{   
             @extend .section__products--a;             
             background-image: $filter-1,
-            url("../img/harinas.jpg");    
+            url("../img/harinas.webp");    
         }
 
         &--5{   
             @extend .section__products--a;              
             background-image: $filter-1,
-            url("../img/vegano.jpg");
+            url("../img/vegano.webp");
     
             @include sm{
             &{
@@ -129,7 +129,6 @@
                 &{
                     line-height: 22rem;
                     &:hover{
-                        cursor: pointer;
                         color: map-get($map: $clr, $key: uno);
                         background-image: linear-gradient(0deg, 
                         rgba(0,0,0,0.5),
@@ -257,7 +256,7 @@
         font-size: 1.7rem;
         font-weight: bold;
     }
-    &__a{
+    &__buy{
         margin: auto;
         width: 25%;
         margin-bottom: 0.5rem;
